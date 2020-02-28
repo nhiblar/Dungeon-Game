@@ -1,17 +1,14 @@
-public abstract class DungeonCharacter implements Comparable {
+public abstract class DungeonCharacter {
 
 	protected String name;
 	protected int hitPoints;
 	protected int attackSpeed;
 	protected double chanceToHit;
 	protected int damageMin, damageMax;
-
-	public int compareTo(Object o) {
-		return 1;
-	}
+	protected int damageResist;
 
 	public DungeonCharacter(String name, int hitPoints, int attackSpeed,
-				     double chanceToHit, int damageMin, int damageMax) {
+				     double chanceToHit, int damageMin, int damageMax, int damageResist) {
 
 		this.name = name;
 		this.hitPoints = hitPoints;
@@ -19,6 +16,7 @@ public abstract class DungeonCharacter implements Comparable {
 		this.chanceToHit = chanceToHit;
 		this.damageMin = damageMin;
 		this.damageMax = damageMax;
+		this.damageResist = damageResist;
 
 	}//end constructor
 
@@ -33,23 +31,23 @@ public abstract class DungeonCharacter implements Comparable {
 	public int getAttackSpeed() {
 		return attackSpeed;
 	}//end getAttackSpeed
+	
+	public int getDamageResist() {
+		return damageResist;
+	}
 
 	public void addHitPoints(int hitPoints) {
 		if (hitPoints <=0)
 			System.out.println("Hitpoint amount must be positive.");
-		else
-		{
+		else {
 			this.hitPoints += hitPoints;
-			//System.out.println("Remaining Hit Points: " + hitPoints);
-
 		}
 	}
 	
 	public void subtractHitPoints(int hitPoints) {
 		if (hitPoints <0)
 			System.out.println("Hitpoint amount must be positive.");
-		else if (hitPoints >0)
-		{
+		else if (hitPoints >0) {
 			this.hitPoints -= hitPoints;
 			if (this.hitPoints < 0)
 				this.hitPoints = 0;
@@ -62,8 +60,7 @@ public abstract class DungeonCharacter implements Comparable {
 
 		if (this.hitPoints == 0)
 			System.out.println(name + " has been killed :-(");
-
-
+		
 	}//end method
 
 	public boolean isAlive() {
@@ -80,13 +77,9 @@ public abstract class DungeonCharacter implements Comparable {
 			damage = (int)(Math.random() * (damageMax - damageMin + 1))
 						+ damageMin ;
 			opponent.subtractHitPoints(damage);
-
-
-
 			System.out.println();
 		}//end if can attack
 		else {
-
 			System.out.println(getName() + "'s attack on " + opponent.getName() +
 								" failed!");
 			System.out.println();
