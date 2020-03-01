@@ -1,4 +1,4 @@
-public abstract class DungeonCharacter implements AttackBehavior, SpecialAttack{
+public abstract class DungeonCharacter implements AttackBehavior{
 
 	protected String name;
 	protected int hitPoints;
@@ -6,6 +6,17 @@ public abstract class DungeonCharacter implements AttackBehavior, SpecialAttack{
 	protected int AC;
 	protected int damageDie;
 	protected AttackBehavior attackBehavior;
+
+	public DungeonCharacter(String name, int hitPoints, int initiative,
+				     int AC, int damageDie, int damageResist) {
+
+		this.name = name;
+		this.hitPoints = hitPoints;
+		this.initiative = initiative;
+		this.AC = AC;
+		this.damageDie = damageDie;
+
+	}//end constructor
 
 	public int getAC() {
 		return AC;
@@ -22,17 +33,6 @@ public abstract class DungeonCharacter implements AttackBehavior, SpecialAttack{
 	public void setDamageDie(int damageDie) {
 		this.damageDie = damageDie;
 	}
-
-	public DungeonCharacter(String name, int hitPoints, int initiative,
-				     int AC, int damageDie, int damageResist) {
-
-		this.name = name;
-		this.hitPoints = hitPoints;
-		this.initiative = initiative;
-		this.AC = AC;
-		this.damageDie = damageDie;
-
-	}//end constructor
 
 	public String getName() {
 		return name;
