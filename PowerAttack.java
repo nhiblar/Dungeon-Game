@@ -1,6 +1,3 @@
-import java.util.Random;
-//Double damage if it hits
-
 public class PowerAttack implements SpecialAttack {
 
     @Override
