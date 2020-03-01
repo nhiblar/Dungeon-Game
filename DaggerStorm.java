@@ -10,7 +10,7 @@ public class DaggerStorm implements SpecialAttack {
             }
             if (this.count > 0) {
                 for (int j = 0; j < this.count; j++) {
-                    int dam = Dice.d8();
+                    int dam = Dice.d4();
                     enemy.subtractHitPoints(dam);
                     System.out.printf("Your Dagger Storm hits the %s for %d damage!\n", enemy.getName(), dam);
                 }
