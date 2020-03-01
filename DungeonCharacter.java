@@ -5,6 +5,7 @@ public abstract class DungeonCharacter implements AttackBehavior, SpecialAttack{
 	protected int initiative;
 	protected int AC;
 	protected int damageDie;
+	protected AttackBehavior attackBehavior;
 
 	public int getAC() {
 		return AC;
