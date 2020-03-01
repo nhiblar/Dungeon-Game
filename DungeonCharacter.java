@@ -1,26 +1,38 @@
-public abstract class DungeonCharacter implements Comparable {
+public abstract class DungeonCharacter implements AttackBehavior{
 
 	protected String name;
 	protected int hitPoints;
-	protected int attackSpeed;
-	protected double chanceToHit;
-	protected int damageMin, damageMax;
+	protected int initiative;
+	protected int AC;
+	protected int damageDie;
+	protected AttackBehavior attackBehavior;
 
-	public int compareTo(Object o) {
-		return 1;
-	}
-
-	public DungeonCharacter(String name, int hitPoints, int attackSpeed,
-				     double chanceToHit, int damageMin, int damageMax) {
+	public DungeonCharacter(String name, int hitPoints, int initiative,
+				     int AC, int damageDie, int damageResist) {
 
 		this.name = name;
 		this.hitPoints = hitPoints;
-		this.attackSpeed = attackSpeed;
-		this.chanceToHit = chanceToHit;
-		this.damageMin = damageMin;
-		this.damageMax = damageMax;
+		this.initiative = initiative;
+		this.AC = AC;
+		this.damageDie = damageDie;
 
 	}//end constructor
+
+	public int getAC() {
+		return AC;
+	}
+
+	public void setAC(int AC) {
+		this.AC = AC;
+	}
+
+	public int getDamageDie() {
+		return damageDie;
+	}
+
+	public void setDamageDie(int damageDie) {
+		this.damageDie = damageDie;
+	}
 
 	public String getName() {
 		return name;
@@ -28,28 +40,20 @@ public abstract class DungeonCharacter implements Comparable {
 
 	public int getHitPoints() {
 		return hitPoints;
-	}//end getHitPoints 
-	
-	public int getAttackSpeed() {
-		return attackSpeed;
-	}//end getAttackSpeed
+	}//end getHitPoints
 
 	public void addHitPoints(int hitPoints) {
 		if (hitPoints <=0)
 			System.out.println("Hitpoint amount must be positive.");
-		else
-		{
+		else {
 			this.hitPoints += hitPoints;
-			//System.out.println("Remaining Hit Points: " + hitPoints);
-
 		}
 	}
 	
 	public void subtractHitPoints(int hitPoints) {
 		if (hitPoints <0)
 			System.out.println("Hitpoint amount must be positive.");
-		else if (hitPoints >0)
-		{
+		else if (hitPoints >0) {
 			this.hitPoints -= hitPoints;
 			if (this.hitPoints < 0)
 				this.hitPoints = 0;
@@ -62,35 +66,13 @@ public abstract class DungeonCharacter implements Comparable {
 
 		if (this.hitPoints == 0)
 			System.out.println(name + " has been killed :-(");
-
-
+		
 	}//end method
 
 	public boolean isAlive() {
 	  return (hitPoints > 0);
 	}//end isAlive method
 
-	public void attack(DungeonCharacter opponent) {
-		boolean canAttack;
-		int damage;
-
-		canAttack = Math.random() <= chanceToHit;
-
-		if (canAttack) {
-			damage = (int)(Math.random() * (damageMax - damageMin + 1))
-						+ damageMin ;
-			opponent.subtractHitPoints(damage);
-
-
-
-			System.out.println();
-		}//end if can attack
-		else {
-
-			System.out.println(getName() + "'s attack on " + opponent.getName() +
-								" failed!");
-			System.out.println();
-		}
-	}
+	public abstract void attack(DungeonCharacter opponent);
 	
 }
