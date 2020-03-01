@@ -1,22 +1,35 @@
-public abstract class DungeonCharacter {
+public abstract class DungeonCharacter implements AttackBehavior, SpecialAttack{
 
 	protected String name;
 	protected int hitPoints;
-	protected int attackSpeed;
-	protected double chanceToHit;
-	protected int damageMin, damageMax;
-	protected int damageResist;
+	protected int initiative;
+	protected int AC;
+	protected int damageDie;
 
-	public DungeonCharacter(String name, int hitPoints, int attackSpeed,
-				     double chanceToHit, int damageMin, int damageMax, int damageResist) {
+	public int getAC() {
+		return AC;
+	}
+
+	public void setAC(int AC) {
+		this.AC = AC;
+	}
+
+	public int getDamageDie() {
+		return damageDie;
+	}
+
+	public void setDamageDie(int damageDie) {
+		this.damageDie = damageDie;
+	}
+
+	public DungeonCharacter(String name, int hitPoints, int initiative,
+				     int AC, int damageDie, int damageResist) {
 
 		this.name = name;
 		this.hitPoints = hitPoints;
-		this.attackSpeed = attackSpeed;
-		this.chanceToHit = chanceToHit;
-		this.damageMin = damageMin;
-		this.damageMax = damageMax;
-		this.damageResist = damageResist;
+		this.initiative = initiative;
+		this.AC = AC;
+		this.damageDie = damageDie;
 
 	}//end constructor
 
@@ -26,15 +39,7 @@ public abstract class DungeonCharacter {
 
 	public int getHitPoints() {
 		return hitPoints;
-	}//end getHitPoints 
-	
-	public int getAttackSpeed() {
-		return attackSpeed;
-	}//end getAttackSpeed
-	
-	public int getDamageResist() {
-		return damageResist;
-	}
+	}//end getHitPoints
 
 	public void addHitPoints(int hitPoints) {
 		if (hitPoints <=0)
@@ -67,23 +72,6 @@ public abstract class DungeonCharacter {
 	  return (hitPoints > 0);
 	}//end isAlive method
 
-	public void attack(DungeonCharacter opponent) {
-		boolean canAttack;
-		int damage;
-
-		canAttack = Math.random() <= chanceToHit;
-
-		if (canAttack) {
-			damage = (int)(Math.random() * (damageMax - damageMin + 1))
-						+ damageMin ;
-			opponent.subtractHitPoints(damage);
-			System.out.println();
-		}//end if can attack
-		else {
-			System.out.println(getName() + "'s attack on " + opponent.getName() +
-								" failed!");
-			System.out.println();
-		}
-	}
+	public abstract void attack(DungeonCharacter opponent);
 	
 }
