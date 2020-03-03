@@ -26,15 +26,14 @@ public class GetUserInput {
 			kb = new Scanner(System.in);
 			System.out.println("Enter your hero's race: " +
 						"\r\n(Discovered Races: Aarakocra, BugBear, Elf, Dragonborn, Dwarf, Gnome, Goliath, HalfElf, Human, Lizardfolk, Triton, Tabaxi)");
-			heroRace = kb.nextLine();
+			heroRace = kb.nextLine().trim();
 			if(heroRace.length() > 1)
 				heroRace = heroRace.substring(0, 1).toUpperCase() + heroRace.substring(1).toLowerCase();
 			try {
 				
 				for(heroRaces tempVal : heroRaces.values() ) {
-				    if(heroRace.equalsIgnoreCase(tempVal.name())) {
+				    if(heroRace.equalsIgnoreCase(tempVal.name()))
 				        repeat = true;
-				    }
 				}
 			} catch (InputMismatchException e ) {}
 			
@@ -53,15 +52,14 @@ public class GetUserInput {
 			kb = new Scanner(System.in);
 			System.out.println("Enter your hero's class: "
 					+ "\r\n(Known classes: Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard)");
-			heroClass = kb.nextLine();
+			heroClass = kb.nextLine().trim();
 			if(heroClass.length() > 1)
 				heroClass = heroClass.substring(0, 1).toUpperCase() + heroClass.substring(1).toLowerCase();
 			
 			try {
 				for(heroClasses tempVal : heroClasses.values() ) {
-				    if(heroClass.equalsIgnoreCase(tempVal.name())) {
+				    if(heroClass.equalsIgnoreCase(tempVal.name()))
 				        repeat = true;
-				    }
 				}
 			} catch (InputMismatchException e ) {}
 		}
@@ -74,11 +72,12 @@ public class GetUserInput {
 		String heroName = "";
 		Scanner kb = new Scanner(System.in);
 		
-		while(heroName.isEmpty() || heroName.equals(" ")) {
+		while(heroName.isEmpty() || heroName.length() < 1) {
 				System.out.println("Enter your hero's Name: ");
 				heroName = kb.nextLine();
-			}
-		heroName = heroName.substring(0, 1).toUpperCase() + heroName.substring(1).toLowerCase();	
+				heroName = heroName.trim();
+		}
+		heroName = heroName.substring(0, 1).toUpperCase() + heroName.substring(1).toLowerCase();
 		kb.close();
 		return heroName;
 	}
