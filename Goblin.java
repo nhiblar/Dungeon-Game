@@ -4,8 +4,9 @@ public class Goblin extends Monster{
 	
 	public Goblin()
 	{
-		super("Gangar the Goblin", 50, 50, 50, 50);
-		attackBehavior = new //type of attack behavior
+		//String name, int hitPoints, int initiative, int damageDie, int ac
+		super("Gangar the Goblin", 7, 2, 50, 15);
+		attackBehavior = new Shortsword();
 
     }//end constructor
 

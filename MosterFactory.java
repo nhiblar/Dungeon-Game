@@ -12,7 +12,7 @@ public interface MosterFactory {
 		return new Goblin();
 	}
 	public static Monster createBeholder() {
-		return new Beholder();
+		return new Gnoll();
 	}
 	public static Monster createBandit() {
 		return new Bandit();

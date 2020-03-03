@@ -4,8 +4,9 @@ public class Bandit extends Monster{
 	
 	public Bandit()
 	{
-		super("Jerry the Bandit", 50, 50, 50, 50);
-		attackBehavior = new //type of attack behavior
+		//String name, int hitPoints, int initiative, int damageDie, int ac
+		super("Jerry the Bandit", 11, 1, 50, 12);
+		attackBehavior = new Shortsword();
 
     }//end constructor
 

@@ -4,8 +4,9 @@ public class Orc extends Monster{
 	
 	public Orc()
 	{
-		super("lugger the Orc", 50, 50, 50, 50);
-		attackBehavior = new //type of attack behavior
+		//String name, int hitPoints, int initiative, int damageDie, int ac
+		super("lugger the Orc", 15, 1, 50, 13);
+		attackBehavior = new Greatsword();
 
     }//end constructor
 
