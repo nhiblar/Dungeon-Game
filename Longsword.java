@@ -1,3 +1,5 @@
+package gameCharacters;
+
 public class Longsword implements AttackBehavior {
 
     @Override

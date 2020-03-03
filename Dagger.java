@@ -1,3 +1,5 @@
+package gameCharacters;
+
 public class Dagger implements AttackBehavior {
 
 

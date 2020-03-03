@@ -1,3 +1,5 @@
+package gameCharacters;
+
 public class Mace implements AttackBehavior {
 
     @Override

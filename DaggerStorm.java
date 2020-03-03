@@ -1,3 +1,5 @@
+package gameCharacters;
+
 public class DaggerStorm implements SpecialAttack {
 
     private int count;

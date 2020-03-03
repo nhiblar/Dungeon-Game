@@ -1,3 +1,5 @@
+package gameCharacters;
+
 public class Quarterstaff implements AttackBehavior {
 
     @Override

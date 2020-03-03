@@ -1,12 +1,12 @@
-package DungeonGame;
+package gameCharacters;
 
 public class DungeonGameTester {
 	
 	public static void main(String[] args) {
 		
 		HeroFactory heroFactory = new HeroFactory();
-		Hero newHero = heroFactory.newHero(GetUserInput.getRaceFromUser(), GetUserInput.getClassFromUser(), GetUserInput.getNameFromUser());
-		newHero.printHero();
+		Hero theHero = heroFactory.newHero(GetUserInput.getRaceFromUser(), GetUserInput.getClassFromUser(), GetUserInput.getNameFromUser());
+		
 		
 	}//end main
 }//end class

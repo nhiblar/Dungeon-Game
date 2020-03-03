@@ -1,4 +1,4 @@
-package DungeonGame;
+package gameCharacters;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -30,7 +30,6 @@ public class GetUserInput {
 			if(heroRace.length() > 1)
 				heroRace = heroRace.substring(0, 1).toUpperCase() + heroRace.substring(1).toLowerCase();
 			try {
-				
 				for(heroRaces tempVal : heroRaces.values() ) {
 				    if(heroRace.equalsIgnoreCase(tempVal.name()))
 				        repeat = true;
@@ -55,7 +54,6 @@ public class GetUserInput {
 			heroClass = kb.nextLine().trim();
 			if(heroClass.length() > 1)
 				heroClass = heroClass.substring(0, 1).toUpperCase() + heroClass.substring(1).toLowerCase();
-			
 			try {
 				for(heroClasses tempVal : heroClasses.values() ) {
 				    if(heroClass.equalsIgnoreCase(tempVal.name()))
@@ -65,7 +63,6 @@ public class GetUserInput {
 		}
 		return heroClass;
 	}//end getClassFromUser
-	
 	
 	public static String getNameFromUser() {
 		
@@ -81,6 +78,5 @@ public class GetUserInput {
 		kb.close();
 		return heroName;
 	}
-
 	
 }

@@ -1,22 +1,20 @@
+package gameCharacters;
+
 public abstract class DungeonCharacter implements AttackBehavior{
 
 	protected String name;
 	protected int hitPoints;
 	protected int initiative;
 	protected int AC;
-	protected int damageDie;
 	protected AttackBehavior attackBehavior;
 
-	public DungeonCharacter(String name, int hitPoints, int initiative,
-				     int AC, int damageDie, int damageResist) {
-
+	public DungeonCharacter(String name, int hitPoints, int initiative, int AC, AttackBehavior attackBehavior) {
 		this.name = name;
 		this.hitPoints = hitPoints;
 		this.initiative = initiative;
 		this.AC = AC;
-		this.damageDie = damageDie;
-
-	}//end constructor
+		this.attackBehavior = attackBehavior;
+	}
 
 	public int getAC() {
 		return AC;
@@ -24,14 +22,6 @@ public abstract class DungeonCharacter implements AttackBehavior{
 
 	public void setAC(int AC) {
 		this.AC = AC;
-	}
-
-	public int getDamageDie() {
-		return damageDie;
-	}
-
-	public void setDamageDie(int damageDie) {
-		this.damageDie = damageDie;
 	}
 
 	public String getName() {
