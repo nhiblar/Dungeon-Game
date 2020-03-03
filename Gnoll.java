@@ -3,7 +3,8 @@ package gameCharacters;
 public class Gnoll extends Monster{
 	public Gnoll()
 	{
-		super("Monica the Beholder", 50, 50, 50, 50);
+		//String name, int hitPoints, int initiative, int damageDie, int ac
+		super("Monica the Gnoll", 22, 1, 50, 15);
 		attackBehavior = new Club();
 
     }//end constructor

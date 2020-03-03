@@ -4,8 +4,9 @@ public class KoBold extends Monster{
 	
 	public KoBold()
 	{
-		super("Kronk the KoBold", 50, 50, 50, 50);
-		attackBehavior = new //type of attack behavior
+		//String name, int hitPoints, int initiative, int damageDie, int ac
+		super("Kronk the KoBold", 5, 2, 50, 12);
+		attackBehavior = new Dagger();
 
     }//end constructor
 
