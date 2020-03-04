@@ -1,6 +1,7 @@
+package gameCharacters;
+
 public class ShortSword implements AttackBehavior {
 
-    @Override
     public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
@@ -15,5 +16,9 @@ public class ShortSword implements AttackBehavior {
     @Override
     public String toString() {
         return " slices ";
+    }
+    
+    public String getName() {
+    	return "Short sword";
     }
 }

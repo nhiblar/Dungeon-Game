@@ -1,3 +1,5 @@
+package gameCharacters;
+
 public class Fireball implements SpecialAttack {
     //Auto hits for big damage!
     @Override

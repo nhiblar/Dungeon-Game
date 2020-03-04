@@ -1,22 +1,20 @@
+package gameCharacters;
+
 public abstract class DungeonCharacter implements AttackBehavior{
 
 	protected String name;
 	protected int hitPoints;
 	protected int initiative;
 	protected int AC;
-	protected int damageDie;
 	protected AttackBehavior attackBehavior;
 
-	public DungeonCharacter(String name, int hitPoints, int initiative,
-				     int AC, int damageDie, int damageResist) {
-
+	public DungeonCharacter(String name, int hitPoints, int initiative, int AC, AttackBehavior attackBehavior) {
 		this.name = name;
 		this.hitPoints = hitPoints;
 		this.initiative = initiative;
 		this.AC = AC;
-		this.damageDie = damageDie;
-
-	}//end constructor
+		this.attackBehavior = attackBehavior;
+	}
 
 	public int getAC() {
 		return AC;
@@ -26,22 +24,21 @@ public abstract class DungeonCharacter implements AttackBehavior{
 		this.AC = AC;
 	}
 
-	public int getDamageDie() {
-		return damageDie;
-	}
-
-	public void setDamageDie(int damageDie) {
-		this.damageDie = damageDie;
-	}
-
 	public String getName() {
 		return name;
 	}//end getName
+	
+	public AttackBehavior getAttackBehavior() {
+		return this.attackBehavior;
+	}
 
 	public int getHitPoints() {
 		return hitPoints;
 	}//end getHitPoints
 
+	public int getInitiative() {
+		return initiative;
+	}
 	public void addHitPoints(int hitPoints) {
 		if (hitPoints <=0)
 			System.out.println("Hitpoint amount must be positive.");
@@ -51,28 +48,19 @@ public abstract class DungeonCharacter implements AttackBehavior{
 	}
 	
 	public void subtractHitPoints(int hitPoints) {
-		if (hitPoints <0)
+		if (hitPoints < 0)
 			System.out.println("Hitpoint amount must be positive.");
-		else if (hitPoints >0) {
+		else if (hitPoints > 0) {
 			this.hitPoints -= hitPoints;
 			if (this.hitPoints < 0)
 				this.hitPoints = 0;
-			System.out.println(getName() + " hit " +
-								" for <" + hitPoints + "> points damage.");
-			System.out.println(getName() + " now has " +
-								getHitPoints() + " hit points remaining.");
-			System.out.println();
-		}//end else if
-
-		if (this.hitPoints == 0)
-			System.out.println(name + " has been killed :-(");
-
+		}
 	}//end method
 
 	public boolean isAlive() {
 		return (hitPoints > 0);
 	}//end isAlive method
-
-	public abstract int attack(DungeonCharacter opponent);
+	
+	public void attack() {}
 
 }

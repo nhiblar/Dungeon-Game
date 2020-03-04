@@ -1,10 +1,11 @@
+package gameCharacters;
+
 public class GreatSword implements AttackBehavior {
 
-    @Override
     public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
-            int dam = Dice.d6() + Dice.d6();
+            int dam = 2 + Dice.d6() + Dice.d6();
             enemy.subtractHitPoints(dam);
             return dam;
         }
@@ -14,5 +15,9 @@ public class GreatSword implements AttackBehavior {
     @Override
     public String toString() {
         return " cleaves ";
+    }
+    
+    public String getName() {
+    	return "Great sword";
     }
 }

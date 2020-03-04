@@ -1,3 +1,6 @@
+package gameCharacters;
+
 public interface SpecialAttack {
-    void specialAttack(DungeonCharacter enemy);
+    int specialAttack(DungeonCharacter enemy);
+    String getName();
 }
