@@ -1,5 +1,5 @@
 package gameCharacters;
 
 public interface AttackBehavior {
-    void attack(DungeonCharacter enemy);
+    int attack(DungeonCharacter enemy);
 }

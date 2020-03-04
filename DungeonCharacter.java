@@ -56,13 +56,13 @@ public abstract class DungeonCharacter implements AttackBehavior{
 
 		if (this.hitPoints == 0)
 			System.out.println(name + " has been killed :-(");
-		
+
 	}//end method
 
 	public boolean isAlive() {
-	  return (hitPoints > 0);
+		return (hitPoints > 0);
 	}//end isAlive method
 
-	public abstract void attack(DungeonCharacter opponent);
-	
+	public abstract int attack(DungeonCharacter opponent);
+
 }

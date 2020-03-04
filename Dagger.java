@@ -2,23 +2,30 @@ package gameCharacters;
 
 public class Dagger implements AttackBehavior {
 
+    private int damage;
 
     @Override
-    public void attack(DungeonCharacter enemy) {
+    public int attack(DungeonCharacter enemy) {
         int dam;
         //Main hand attack
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
             dam = Dice.d4();
             enemy.subtractHitPoints(dam);
-            System.out.printf("You stab the %s with your main dagger for %d damage!\n", enemy.getName(), dam);
+            damage = dam;
         }
         //Offhand attack
         doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
             dam = Dice.d4();
             enemy.subtractHitPoints(dam);
-            System.out.printf("You stab the %s with your off hand dagger for %d damage!\n", enemy.getName(), dam);
+            damage += dam;
         }
+        return this.damage;
+    }
+
+    @Override
+    public String toString() {
+        return " stabs ";
     }
 }
