@@ -9,10 +9,9 @@ public class Aarakocra extends Hero{
 	}
 
 	@Override
-	public void attack(DungeonCharacter opponent) {
+	public int attack(DungeonCharacter opponent) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
-
 	
 }

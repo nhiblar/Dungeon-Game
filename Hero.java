@@ -1,6 +1,6 @@
 package gameCharacters;
 
-public abstract class Hero extends DungeonCharacter{
+public abstract class Hero extends DungeonCharacter implements AttackBehavior{
 
 	private String charRace;
 	private String charClass;
@@ -10,7 +10,7 @@ public abstract class Hero extends DungeonCharacter{
 		super(name, hitPoints, initiative, ac, ab);
 	}
 	
-	protected SpecialAttack setSpecialAttack(String sa) {
+	public SpecialAttack setSpecialAttack(String sa) {
 		return AssignSpecialAttacks.getSpecialAttack(sa);
 	}
 	public SpecialAttack getSpecialAttack() {
@@ -21,16 +21,13 @@ public abstract class Hero extends DungeonCharacter{
 		this.charClass = charClass;	
 		this.specialAttack = AssignSpecialAttacks.getSpecialAttack(charClass);
 	}
+	
 	public String getCharClass() { return this.charClass; }
 
 	protected void setCharRace(String charRace) {
 		this.charRace = charRace;
 	}
+
 	public String getCharRace() { return this.charRace; }
-	/*
-	public void printHero() {
-		System.out.println("Race: " + this.getCharRace() + "\nClass: " + this.getCharClass() + "\nName: " + this.getName());
-		System.out.println("Special Attack: " + this.getSpecialAttack().getClass());
-	}
-	*/
+
 }//end Hero class

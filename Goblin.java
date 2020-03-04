@@ -10,10 +10,14 @@ public class Goblin extends Monster{
     }//end constructor
 
 	@Override
-	public int attack(DungeonCharacter opponent) {
+	public int attack(DungeonCharacter enemy) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	
+	@Override
+	public String toString() {
+		return "Goblin";
+	}
 
 }

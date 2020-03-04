@@ -14,6 +14,10 @@ public class Gnoll extends Monster{
 		return 0;
 	}
 
+	@Override
+	public String toString() {
+		return "Gnoll";
+	}
 
 
 }

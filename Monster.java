@@ -1,21 +1,14 @@
 package gameCharacters;
 
-public abstract class Monster extends DungeonCharacter implements MonsterAttack{
+public abstract class Monster extends DungeonCharacter {
 
-
-//-----------------------------------------------------------------
-  public Monster(String name, int hitPoints, int initiative, int damageDie, int ac)
+  public Monster(String name, int hitPoints, int initiative, int ac, AttackBehavior ab)
   {
-	super(name, hitPoints, initiative, damageDie, ac);
-
-
+	super(name, hitPoints, initiative, ac, ab);
   }//end monster construcotr
 
-//-----------------------------------------------------------------
  public void setNewMonsterAttack(AttackBehavior attack) {
 	 this.attackBehavior = attack;
  }
 
-
-	
 }

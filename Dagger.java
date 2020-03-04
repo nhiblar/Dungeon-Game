@@ -4,7 +4,6 @@ public class Dagger implements AttackBehavior {
 
     private int damage;
 
-    @Override
     public int attack(DungeonCharacter enemy) {
         int dam;
         //Main hand attack

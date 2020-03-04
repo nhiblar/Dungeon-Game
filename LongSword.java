@@ -2,7 +2,6 @@ package gameCharacters;
 
 public class LongSword implements AttackBehavior {
 
-    @Override
     public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {

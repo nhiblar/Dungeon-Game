@@ -8,11 +8,11 @@ public class Tabaxi extends Hero {
 		setCharRace("Tabaxi");
 	}
 
-	
 	@Override
-	public void attack(DungeonCharacter opponent) {
+	public int attack(DungeonCharacter enemy) {
 		// TODO Auto-generated method stub
-
+		return 0;
 	}
+
 
 }

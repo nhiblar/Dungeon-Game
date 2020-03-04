@@ -12,7 +12,12 @@ public class Bandit extends Monster{
 	@Override
 	public int attack(DungeonCharacter opponent) {
 		// TODO Auto-generated method stub
-		return 0;
+		return 10;
+	}
+	
+	@Override
+	public String toString() {
+		return "Bandit";
 	}
 
 

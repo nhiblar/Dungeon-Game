@@ -4,8 +4,7 @@ public class HeroFactory {
 
 	public Hero newHero(String charRace, String charClass, String name){
 		
-		String race = charRace;
-		switch(race) {
+		switch(charRace) {
 			case "Aarakocra":
 				return new Aarakocra(name, 14, 3, 16, charClass, new ShortSword());
 			case "Bugbear":

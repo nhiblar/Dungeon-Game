@@ -27,11 +27,18 @@ public abstract class DungeonCharacter implements AttackBehavior{
 	public String getName() {
 		return name;
 	}//end getName
+	
+	public AttackBehavior getAttackBehavior() {
+		return this.attackBehavior;
+	}
 
 	public int getHitPoints() {
 		return hitPoints;
 	}//end getHitPoints
 
+	public int getInitiative() {
+		return initiative;
+	}
 	public void addHitPoints(int hitPoints) {
 		if (hitPoints <=0)
 			System.out.println("Hitpoint amount must be positive.");
@@ -62,7 +69,7 @@ public abstract class DungeonCharacter implements AttackBehavior{
 	public boolean isAlive() {
 		return (hitPoints > 0);
 	}//end isAlive method
-
-	public abstract int attack(DungeonCharacter opponent);
+	
+	public void attack() {}
 
 }
