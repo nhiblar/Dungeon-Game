@@ -1,3 +1,5 @@
+package gameCharacters;
+
 public class CureWounds implements SpecialAttack {
     //healing spell
 

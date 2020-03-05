@@ -23,7 +23,7 @@ public class DaggerStorm implements SpecialAttack {
 
     @Override
     public String toString() {
-        return " used Dagger Storm, hitting %d times for ", count;
+        return " used Dagger Storm, hitting " + this.count + " times for ";
     }
     
     @Override
