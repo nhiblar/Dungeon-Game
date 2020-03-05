@@ -41,6 +41,7 @@ public abstract class DungeonCharacter implements AttackBehavior {
 	public int getInitiative() {
 		return initiative;
 	}
+	public void setInitiative(int initiative){this.initiative = initiative;}
 	public void addHitPoints(int hitPoints) {
 		if (hitPoints <=0)
 			System.out.println("Hitpoint amount must be positive.");
