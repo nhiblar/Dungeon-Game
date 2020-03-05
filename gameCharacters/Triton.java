@@ -10,11 +10,4 @@ public class Triton extends Hero {
 		setCharRace("Triton");
 	}
 
-	
-	@Override
-	public void attack(DungeonCharacter opponent) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

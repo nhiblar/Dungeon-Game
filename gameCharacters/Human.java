@@ -10,11 +10,5 @@ public class Human extends Hero {
 		setCharRace("Human");
 	}
 
-	
-	@Override
-	public void attack(DungeonCharacter opponent) {
-		// TODO Auto-generated method stub
-
-	}
 
 }

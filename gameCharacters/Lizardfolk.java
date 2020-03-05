@@ -9,12 +9,4 @@ public class Lizardfolk extends Hero {
 		setCharClass(charClass);
 		setCharRace("Lizardfolk");
 	}
-
-	
-	@Override
-	public void attack(DungeonCharacter opponent) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

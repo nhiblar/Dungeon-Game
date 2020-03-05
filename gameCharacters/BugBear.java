@@ -11,11 +11,5 @@ public class BugBear extends Hero {
 		setCharClass(charClass);
 		//setSpecialAttack(charClass);
 	}
-	
-	@Override
-	public void attack(DungeonCharacter opponent) {
-		
-	}
-
 }
 

@@ -10,11 +10,4 @@ public class Gnome extends Hero {
 		setCharRace("Gnome");
 	}
 
-	
-	@Override
-	public void attack(DungeonCharacter opponent) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

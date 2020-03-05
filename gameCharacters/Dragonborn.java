@@ -11,10 +11,4 @@ public class Dragonborn extends Hero {
 		setCharRace("Dragonborn");
 	}
 
-	@Override
-	public void attack(DungeonCharacter opponent) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

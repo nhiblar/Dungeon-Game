@@ -10,11 +10,4 @@ public class Dwarf extends Hero {
 		setCharRace("Dwarf");
 	}
 
-	
-	@Override
-	public void attack(DungeonCharacter opponent) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
