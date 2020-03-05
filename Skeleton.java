@@ -4,9 +4,11 @@ public class Skeleton extends Monster{
     
 	public Skeleton()
 	{
-		//String name, int hitPoints, int initiative, int damageDie, int ac
-		super("Sargath the Skeleton", 13, 2, 50, 13);
-		attackBehavior = new Longsword();
+		super("Sargath the Skeleton", 10, 2, 10, new LongSword());
     }//end constructor
 
+	@Override
+	public String toString() {
+		return "Skeleton";
+	}
 }

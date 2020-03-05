@@ -1,10 +1,12 @@
+package gameCharacters;
+
 public class Mace implements AttackBehavior {
 
     @Override
     public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
-            int dam = Dice.d6();
+            int dam = 1 + Dice.d6();
             enemy.subtractHitPoints(dam);
             return dam;
         } else {
@@ -20,5 +22,9 @@ public class Mace implements AttackBehavior {
     @Override
     public String toString() {
         return " crushes ";
+    }
+
+    public String getName() {
+    	return "Mace";
     }
 }

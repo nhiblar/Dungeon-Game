@@ -1,3 +1,5 @@
+package gameCharacters;
+
 public class PowerAttack implements SpecialAttack {
 
     @Override

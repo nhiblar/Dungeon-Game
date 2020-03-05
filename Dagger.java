@@ -1,14 +1,15 @@
+package gameCharacters;
+
 public class Dagger implements AttackBehavior {
 
     private int damage;
 
-    @Override
     public int attack(DungeonCharacter enemy) {
         int dam;
         //Main hand attack
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
-            dam = Dice.d4();
+            dam = 1 + Dice.d4();
             enemy.subtractHitPoints(dam);
             damage = dam;
         }
@@ -30,5 +31,9 @@ public class Dagger implements AttackBehavior {
     @Override
     public String toString() {
         return " stabs ";
+    }
+    
+    public String getName() {
+    	return "Dagger";
     }
 }
