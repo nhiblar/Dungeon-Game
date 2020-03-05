@@ -1,12 +1,14 @@
-package gameCharacters;
+package attack;
 
-public class Quarterstaff implements AttackBehavior {
+import main.Dice;
+import gameCharacters.DungeonCharacter;
 
-    @Override
+public class ShortSword implements AttackBehavior {
+
     public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
-            int dam = 1 + Dice.d6();
+            int dam = Dice.d6();
             enemy.subtractHitPoints(dam);
             return dam;
         } else {
@@ -16,12 +18,12 @@ public class Quarterstaff implements AttackBehavior {
 
     @Override
     public String getName() {
-        return "Quarterstaff";
+        return "Short Sword";
     }
 
     @Override
     public String toString() {
-        return " smacks ";
+        return " slices ";
     }
 
 }

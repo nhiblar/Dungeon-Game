@@ -1,5 +1,7 @@
 package gameCharacters;
 
+import attack.GreatSword;
+
 public class Orc extends Monster{
 	
 	public Orc()

@@ -1,5 +1,7 @@
 package gameCharacters;
 
+import attack.Club;
+
 public class Gnoll extends Monster{
 	public Gnoll()
 	{

@@ -1,10 +1,15 @@
-public class Longsword implements AttackBehavior {
+package attack;
+
+import main.Dice;
+import gameCharacters.DungeonCharacter;
+
+public class Quarterstaff implements AttackBehavior {
 
     @Override
     public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
-            int dam = Dice.d8();
+            int dam = 1 + Dice.d6();
             enemy.subtractHitPoints(dam);
             return dam;
         } else {
@@ -14,11 +19,12 @@ public class Longsword implements AttackBehavior {
 
     @Override
     public String getName() {
-        return "Longsword";
+        return "Quarterstaff";
     }
 
     @Override
     public String toString() {
-        return " slashes ";
+        return " smacks ";
     }
+
 }

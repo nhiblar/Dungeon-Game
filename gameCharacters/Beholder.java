@@ -1,5 +1,7 @@
 package gameCharacters;
 
+import attack.Club;
+
 public class Beholder extends Monster{
 	public Beholder()
 	{

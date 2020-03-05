@@ -1,4 +1,4 @@
-package gameCharacters;
+package main;
 
 import java.util.Random;
 

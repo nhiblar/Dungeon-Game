@@ -1,11 +1,14 @@
-package gameCharacters;
+package attack;
 
-public class Club implements AttackBehavior {
+import main.Dice;
+import gameCharacters.DungeonCharacter;
+
+public class GreatSword implements AttackBehavior {
 
     public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
-            int dam = 2 + Dice.d8();
+            int dam = 2 + Dice.d6() + Dice.d6();
             enemy.subtractHitPoints(dam);
             return dam;
         }
@@ -14,12 +17,11 @@ public class Club implements AttackBehavior {
 
     @Override
     public String getName() {
-        return "Club";
+        return "Great Sword";
     }
 
+    @Override
     public String toString() {
-        return " bashes ";
+        return " cleaves ";
     }
 }
-
-

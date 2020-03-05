@@ -1,4 +1,6 @@
-package gameCharacters;
+package specialAttack;
+
+import gameCharacters.DungeonCharacter;
 
 public interface SpecialAttack {
     int specialAttack(DungeonCharacter enemy);

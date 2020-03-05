@@ -1,24 +1,29 @@
-package gameCharacters;
+package attack;
 
-public class GreatSword implements AttackBehavior {
+import main.Dice;
+import gameCharacters.DungeonCharacter;
 
+public class Greataxe implements AttackBehavior {
+
+    @Override
     public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
-            int dam = 2 + Dice.d6() + Dice.d6();
+            int dam = Dice.d12();
             enemy.subtractHitPoints(dam);
             return dam;
+        } else {
+            return 0;
         }
-        return 0;
     }
 
     @Override
     public String getName() {
-        return "Great Sword";
+        return "Great Axe";
     }
 
     @Override
     public String toString() {
-        return " cleaves ";
+        return " decimates ";
     }
 }

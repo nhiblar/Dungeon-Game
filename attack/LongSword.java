@@ -1,12 +1,14 @@
-package gameCharacters;
+package attack;
 
-public class Greataxe implements AttackBehavior {
+import main.Dice;
+import gameCharacters.DungeonCharacter;
 
-    @Override
+public class LongSword implements AttackBehavior {
+
     public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
-            int dam = Dice.d12();
+            int dam = 2 + Dice.d8();
             enemy.subtractHitPoints(dam);
             return dam;
         } else {
@@ -15,12 +17,11 @@ public class Greataxe implements AttackBehavior {
     }
 
     @Override
-    public String getName() {
-        return "Great Axe";
+    public String toString() {
+        return " slashes ";
     }
 
-    @Override
-    public String toString() {
-        return " decimates ";
+    public String getName() {
+        return "Great sword";
     }
 }

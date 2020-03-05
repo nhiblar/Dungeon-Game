@@ -1,6 +1,6 @@
-package gameCharacters;
+package main;
 
-import java.util.Scanner;
+import gameCharacters.*;
 
 public class DungeonDriver {
 	

@@ -1,6 +1,8 @@
 package gameCharacters;
 
-public abstract class DungeonCharacter implements AttackBehavior{
+import attack.AttackBehavior;
+
+public abstract class DungeonCharacter implements AttackBehavior {
 
 	protected String name;
 	protected int hitPoints;

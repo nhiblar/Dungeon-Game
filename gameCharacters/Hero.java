@@ -1,6 +1,9 @@
 package gameCharacters;
 
-public class Hero extends DungeonCharacter implements AttackBehavior{
+import attack.AttackBehavior;
+import specialAttack.SpecialAttack;
+
+public class Hero extends DungeonCharacter implements AttackBehavior {
 
 	private String charRace;
 	private String charClass;

@@ -1,4 +1,7 @@
-package gameCharacters;
+package attack;
+
+import main.Dice;
+import gameCharacters.DungeonCharacter;
 
 public class Dagger implements AttackBehavior {
 

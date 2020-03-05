@@ -1,4 +1,6 @@
-package gameCharacters;
+package main;
+
+import gameCharacters.Hero;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

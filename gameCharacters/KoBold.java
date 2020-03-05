@@ -1,5 +1,7 @@
 package gameCharacters;
 
+import attack.Dagger;
+
 public class KoBold extends Monster{
 	
 	public KoBold()

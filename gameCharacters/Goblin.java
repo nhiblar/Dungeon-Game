@@ -1,5 +1,7 @@
 package gameCharacters;
 
+import attack.ShortSword;
+
 public class Goblin extends Monster{
 	
 	public Goblin()

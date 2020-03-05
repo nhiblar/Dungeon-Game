@@ -1,4 +1,7 @@
-package gameCharacters;
+package main;
+
+import gameCharacters.Hero;
+import gameCharacters.HeroFactory;
 
 public class DungeonGameTester {
 	

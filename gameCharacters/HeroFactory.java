@@ -1,5 +1,7 @@
 package gameCharacters;
 
+import attack.ShortSword;
+
 public class HeroFactory {
 
 	public Hero newHero(String charRace, String charClass, String name){

@@ -1,5 +1,7 @@
 package gameCharacters;
 
+import attack.AttackBehavior;
+
 public class Dragonborn extends Hero {
 
 	

@@ -1,4 +1,7 @@
-package gameCharacters;
+package specialAttack;
+
+import main.Dice;
+import gameCharacters.DungeonCharacter;
 
 public class Fireball implements SpecialAttack {
     //Auto hits for big damage!

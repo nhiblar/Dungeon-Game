@@ -1,5 +1,8 @@
 package gameCharacters;
 
+import specialAttack.DaggerStorm;
+import specialAttack.SpecialAttack;
+
 public class AssignSpecialAttacks {
 	
 	public static SpecialAttack getSpecialAttack(String checkClass) {
