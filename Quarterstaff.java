@@ -13,6 +13,11 @@ public class Quarterstaff implements AttackBehavior {
     }
 
     @Override
+    public String getName() {
+        return "Quarterstaff";
+    }
+
+    @Override
     public String toString() {
         return " smacks ";
     }

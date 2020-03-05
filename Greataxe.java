@@ -1,23 +1,24 @@
-public class PowerAttack implements SpecialAttack {
+public class Greataxe implements AttackBehavior {
 
     @Override
-    public int specialAttack(DungeonCharacter enemy) {
+    public int attack(DungeonCharacter enemy) {
         boolean doesHit = Dice.d20() - enemy.getAC() > 0;
         if (doesHit) {
-            int dam = Dice.d8() + Dice.d8();
+            int dam = Dice.d12();
             enemy.subtractHitPoints(dam);
             return dam;
+        } else {
+            return 0;
         }
-        return 0;
     }
 
     @Override
     public String getName() {
-        return "Power Attack";
+        return "Great Axe";
     }
 
     @Override
     public String toString() {
-        return " uses Power Attack and deals ";
+        return " decimates ";
     }
 }

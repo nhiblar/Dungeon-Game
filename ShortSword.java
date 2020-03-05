@@ -13,6 +13,11 @@ public class ShortSword implements AttackBehavior {
     }
 
     @Override
+    public String getName() {
+        return "Short Sword";
+    }
+
+    @Override
     public String toString() {
         return " slices ";
     }
