@@ -23,8 +23,5 @@ public class Quarterstaff implements AttackBehavior {
     public String toString() {
         return " smacks ";
     }
-    
-    public String getName() {
-    	return "Quarterstaff";
-    }
+
 }

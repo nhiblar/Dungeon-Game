@@ -23,8 +23,4 @@ public class Mace implements AttackBehavior {
     public String toString() {
         return " crushes ";
     }
-
-    public String getName() {
-    	return "Mace";
-    }
 }

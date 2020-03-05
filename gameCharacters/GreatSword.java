@@ -21,8 +21,4 @@ public class GreatSword implements AttackBehavior {
     public String toString() {
         return " cleaves ";
     }
-    
-    public String getName() {
-    	return "Great sword";
-    }
 }

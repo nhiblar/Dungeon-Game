@@ -32,8 +32,5 @@ public class Dagger implements AttackBehavior {
     public String toString() {
         return " stabs ";
     }
-    
-    public String getName() {
-    	return "Dagger";
-    }
+
 }

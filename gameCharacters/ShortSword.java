@@ -22,8 +22,5 @@ public class ShortSword implements AttackBehavior {
     public String toString() {
         return " slices ";
     }
-    
-    public String getName() {
-    	return "Short sword";
-    }
+
 }
