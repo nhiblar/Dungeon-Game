@@ -84,15 +84,19 @@ public class GetUserInput {
 	public static int getAttackFromUser(Hero hero) {
 
 		System.out.println("Attack with your " + hero.getAttackBehavior().getName() + " (1) or " + hero.getSpecialAttack().getName() + " (2) ?");
-
-
 		Scanner kb = new Scanner(System.in);
+		while (!kb.hasNextInt()) {
+			System.out.println("Please input a number.");
+			kb.nextLine();
+		}
 		int choice = kb.nextInt();
-		if (choice != 1 && choice != 2) {
-			System.out.println("Invalid choice, try again");
-			getAttackFromUser(hero);
+		while (choice != 1 && choice != 2) {
+			System.out.println("Please select from the attack options (1 or 2)");
+			kb.nextLine();
+			choice = kb.nextInt();
 		}
 		return choice;
+	}
 		/*
 		boolean repeat = false;
 		String newNum = "";
@@ -107,6 +111,5 @@ public class GetUserInput {
 		}
 		return Integer.parseInt(newNum);
 		*/
-	}
 	
 }

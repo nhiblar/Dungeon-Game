@@ -34,22 +34,22 @@ public class DungeonDriver {
         	if(hero.getAC() >= monster.getAC()) {
         		if(attackType == 1) {
         			dmg = hero.attack(monster);
-        			System.out.println(hero.getName() + " " + hero.attackBehavior.toString() + " " + monster.getName() + " for " + dmg + " damage");
+        			System.out.println(hero.getName() + " " + hero.getAttackBehavior().toString() + " " + monster.getName() + " for " + dmg + " damage");
                 }else {
         			dmg = hero.specialAttack(monster);
         			System.out.println(hero.getName() + " " + hero.getSpecialAttack() + " " + monster.getName() + " for " + dmg + " damage");
                 }
         		if(monster.isAlive()) {
         		dmg = monster.attack(hero);
-            	System.out.println(monster.getName() + " " + monster.attackBehavior.toString() + " " + hero.getName() + " for " + dmg + " damage");
+            	System.out.println(monster.getName() + " " + monster.getAttackBehavior().toString() + " " + hero.getName() + " for " + dmg + " damage");
         		}
         	}else {
             	dmg = monster.attack(hero);
-            	System.out.println(monster.getName() + " " + monster.attackBehavior.toString() + " " + hero.getName() + " for " + dmg + " damage");
+            	System.out.println(monster.getName() + " " + monster.getAttackBehavior().toString() + " " + hero.getName() + " for " + dmg + " damage");
             	if(hero.isAlive()) {
 	            	if(attackType == 1) {
 	        			dmg = hero.attack(monster);
-	        			System.out.println(hero.getName() + " " + hero.attackBehavior.toString() + " "+ monster.getName() + " for " + dmg + " damage");
+	        			System.out.println(hero.getName() + " " + hero.getAttackBehavior().toString() + " "+ monster.getName() + " for " + dmg + " damage");
 	                }else {
 	        			dmg = hero.specialAttack(monster);
 	        			System.out.println(hero.getName() + " " + hero.getSpecialAttack() + " " + monster.getName() + " for " + dmg + " damage");
