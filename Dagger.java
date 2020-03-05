@@ -24,6 +24,11 @@ public class Dagger implements AttackBehavior {
     }
 
     @Override
+    public String getName() {
+        return "Dagger";
+    }
+
+    @Override
     public String toString() {
         return " stabs ";
     }

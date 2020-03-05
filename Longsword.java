@@ -13,6 +13,11 @@ public class Longsword implements AttackBehavior {
     }
 
     @Override
+    public String getName() {
+        return "Longsword";
+    }
+
+    @Override
     public String toString() {
         return " slashes ";
     }

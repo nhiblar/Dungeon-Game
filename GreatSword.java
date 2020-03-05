@@ -13,6 +13,11 @@ public class GreatSword implements AttackBehavior {
     }
 
     @Override
+    public String getName() {
+        return "Great Sword";
+    }
+
+    @Override
     public String toString() {
         return " cleaves ";
     }

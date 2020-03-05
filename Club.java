@@ -12,6 +12,11 @@ public class Club implements AttackBehavior {
         return 0;
     }
 
+    @Override
+    public String getName() {
+        return "Club";
+    }
+
     public String toString() {
         return " bashes ";
     }

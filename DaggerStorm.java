@@ -5,10 +5,8 @@ public class DaggerStorm implements SpecialAttack {
     private int count;
 
     @Override
-    public int specialAttack(DungeonCharacter enemy) {
-        
+    public int specialAttack(DungeonCharacter enemy) {        
     	int dam = 0;
-    	
     	for (int i = 0; i < 4; i++) {
             if (Dice.d20() - enemy.getAC() > 0) {
                 this.count++;
@@ -18,15 +16,17 @@ public class DaggerStorm implements SpecialAttack {
                     dam += Dice.d4();
                     enemy.subtractHitPoints(dam);
                 }
-            } else { dam = 0; }
+            }
         }
-    	return dam;
+        return dam;
     }
-    
+
+    @Override
     public String toString() {
-    	return (count == 1) ? "Dagger Storm slashes once across " : "Dagger Storm slashes " + count + " times across";
+        return " used Dagger Storm, hitting %d times for ", count;
     }
     
+    @Override
     public String getName() {
     	return "Dagger Storm";
     }

@@ -15,6 +15,11 @@ public class Mace implements AttackBehavior {
     }
 
     @Override
+    public String getName() {
+        return "Mace";
+    }
+
+    @Override
     public String toString() {
         return " crushes ";
     }
