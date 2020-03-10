@@ -1,7 +1,5 @@
 package main;
 
-import gameCharacters.Hero;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,12 +7,12 @@ public class GetUserInput {
 
 	public enum heroRaces {
 		AARAKOCRA, BUGBEAR, ELF, DRAGONBORN, DWARF, GNOME,
-		GOLIATH, HALFELF, HUMAN, LIZARDFOLK, TRITON, TABAXI
+		GOLIATH, HALFELF, HUMAN, LIZARDFOLK, TRITON, TABAXI, FROGLOK
 	}
 	
 	public enum heroClasses{
 		BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK,
-		PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD
+		PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD, NECROMANCER
 	}
 	
 	public static String getRaceFromUser() {
@@ -76,40 +74,38 @@ public class GetUserInput {
 				heroName = heroName.trim();
 		}
 		heroName = heroName.substring(0, 1).toUpperCase() + heroName.substring(1).toLowerCase();
-		kb.close();
 		return heroName;
 	}
 
+	public static int getAttackFromUser() {
 
-	public static int getAttackFromUser(Hero hero) {
-
-		System.out.println("Attack with your " + hero.getAttackBehavior().getName() + " (1) or " + hero.getSpecialAttack().getName() + " (2) ?");
+		String choice = "0";
 		Scanner kb = new Scanner(System.in);
-		while (!kb.hasNextInt()) {
-			System.out.println("Please input a number.");
-			kb.nextLine();
-		}
-		int choice = kb.nextInt();
-		while (choice != 1 && choice != 2) {
-			System.out.println("Please select from the attack options (1 or 2)");
-			kb.nextLine();
-			choice = kb.nextInt();
-		}
-		return choice;
-	}
-		/*
-		boolean repeat = false;
-		String newNum = "";
 		
-		while(repeat == false) {
-			kb = new Scanner(System.in);
-			try {
-				newNum = kb.nextLine();
-				if(newNum.equals("1") || newNum.equals("2"))
-					repeat = true;
-			} catch (InputMismatchException e ) {}
+		while(!(choice.equals("1") || choice.equals("2"))) {
+				choice = kb.nextLine();
+				choice = choice.trim();
+		}//end while
+		int num = Integer.parseInt(choice);
+		return num;
+	}
+	
+	
+	public static String getPlayAgainUser() {
+		
+		String again = "";
+		Scanner kb = new Scanner(System.in);
+		
+		while(!(again.equals("y") || again.equals("n"))) {
+				System.out.println("Play again? Yes (y) or No (n)?");
+				again = kb.nextLine();
+				again = again.trim().toLowerCase();
+				if(again.equals("yes"))
+					again = "y";
+				if(again.equals("no"))
+					again = "n";
 		}
-		return Integer.parseInt(newNum);
-		*/
+		return again;
+	}
 	
 }
