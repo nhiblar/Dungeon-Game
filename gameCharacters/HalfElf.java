@@ -10,10 +10,4 @@ public class HalfElf extends Hero {
 		setCharRace("HalfElf");
 	}
 
-	@Override
-	public int attack(DungeonCharacter enemy) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

@@ -10,11 +10,4 @@ public class Goliath extends Hero {
 		setCharRace("Goliath");
 	}
 
-	
-	@Override
-	public int attack(DungeonCharacter opponent) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

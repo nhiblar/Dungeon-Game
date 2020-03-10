@@ -1,37 +1,48 @@
 package gameCharacters;
 
-import specialAttack.DaggerStorm;
-import specialAttack.SpecialAttack;
+import attack.AttackBehavior;
+import specialAttack.*;
+//import specialAttack.SpecialAttack;
 
 public class AssignSpecialAttacks {
 	
-	public static SpecialAttack getSpecialAttack(String checkClass) {
-
+	public static AttackBehavior getSpecialAttack(String checkClass) {
+		
 		switch (checkClass) {
-			case "Barbarian":
-				return new DaggerStorm();
+			case "Barbarian" :
+			case "PowerAttack":
+				return new PowerAttack();
 			case "Bard":
+			case "DaggerStorm":
 				return new DaggerStorm();
 			case "Cleric":
-				return new DaggerStorm();
+				return new CureWounds();
 			case "Druid":
-				return new DaggerStorm();	
+			case "Entangle":
+				return new Entangle();	
 			case "Fighter":
-				return new DaggerStorm();
+				return new PowerAttack();
 			case "Monk":
 				return new DaggerStorm();
 			case "Paladin":
-				return new DaggerStorm();
+				return new CureWounds();
 			case "Ranger":
-				return new DaggerStorm();
+			case "CureWOunds":
+				return new Haste();
 			case "Rogue":
 				return new DaggerStorm();
 			case "Sorcerer":
-				return new DaggerStorm();
+			case "EldrichBlast":
+				return new EldrichBlast();
 			case "Warlock":
-				return new DaggerStorm();
+			case "MagicMissile":
+				return new MagicMissile();
 			case "Wizard":
-				return new DaggerStorm();
+			case "Fireball":
+				return new Fireball();
+			case "Necromancer":
+			case "LowerGuard":
+				return new LowerGuard();
 		}
 		System.out.println("Defying the creator, you were birth with the special attack Dagger Storm.");
 		return new DaggerStorm();

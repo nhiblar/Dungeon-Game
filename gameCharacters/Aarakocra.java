@@ -10,10 +10,4 @@ public class Aarakocra extends Hero{
 		setCharRace("Aarakocra");
 	}
 
-	@Override
-	public int attack(DungeonCharacter opponent) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 }

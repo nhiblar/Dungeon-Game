@@ -16,5 +16,11 @@ public class Monster extends DungeonCharacter {
 	public int attack(DungeonCharacter enemy) {
 		return attackBehavior.attack(enemy);
 	}
+	
+	@Override
+	public int compareTo(DungeonCharacter arg0) {
+		return this.AC - arg0.getAC();
+	}
+
 
 }

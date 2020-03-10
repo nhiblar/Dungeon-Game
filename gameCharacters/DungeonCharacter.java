@@ -2,7 +2,7 @@ package gameCharacters;
 
 import attack.AttackBehavior;
 
-public abstract class DungeonCharacter implements AttackBehavior {
+public abstract class DungeonCharacter implements AttackBehavior, Comparable<DungeonCharacter>{
 
 	protected String name;
 	protected int hitPoints;
@@ -33,6 +33,10 @@ public abstract class DungeonCharacter implements AttackBehavior {
 	public AttackBehavior getAttackBehavior() {
 		return this.attackBehavior;
 	}
+	
+	public void setAttackBehavior(AttackBehavior ab) {
+		this.attackBehavior = ab;
+	}
 
 	public int getHitPoints() {
 		return hitPoints;
@@ -41,7 +45,10 @@ public abstract class DungeonCharacter implements AttackBehavior {
 	public int getInitiative() {
 		return initiative;
 	}
-	public void setInitiative(int initiative){this.initiative = initiative;}
+	public void setInitiative(int initiative){
+		this.initiative = initiative;
+	}
+	
 	public void addHitPoints(int hitPoints) {
 		if (hitPoints <=0)
 			System.out.println("Hitpoint amount must be positive.");
@@ -63,7 +70,5 @@ public abstract class DungeonCharacter implements AttackBehavior {
 	public boolean isAlive() {
 		return (hitPoints > 0);
 	}//end isAlive method
-	
-	public void attack() {}
 
 }

@@ -9,7 +9,6 @@ public class BugBear extends Hero {
 		super(name, hitPoints, initiative, ac, ab);
 		setCharRace("BugBear");
 		setCharClass(charClass);
-		//setSpecialAttack(charClass);
 	}
 }
 
