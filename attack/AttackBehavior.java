@@ -5,4 +5,5 @@ import gameCharacters.DungeonCharacter;
 public interface AttackBehavior {
     int attack(DungeonCharacter enemy);
     String getName();
+    String toString();
 }
