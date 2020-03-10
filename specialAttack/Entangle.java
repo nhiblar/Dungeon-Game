@@ -11,8 +11,7 @@ public class Entangle implements AttackBehavior {
     public int attack(DungeonCharacter enemy) {
         int dam = Dice.d4();
         enemy.subtractHitPoints(dam);
-        int init = enemy.getInitiative();
-        enemy.setInitiative(init - 4);
+        enemy.setInitiative(1);
         return dam;
     }
 
@@ -21,10 +20,10 @@ public class Entangle implements AttackBehavior {
         return "Entangle";
     }
 
-
     @Override
     public String toString() {
         return " casts Entangle, slowing and dealing ";
     }
+
 }
 
