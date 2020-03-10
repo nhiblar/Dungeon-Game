@@ -47,12 +47,20 @@ public class DungeonDriver {
     }
     
     private static void healTurn(Hero hero, DungeonCharacter monster) {
+    	
     	if(hero.getMana() < 1)
     		System.out.println("You have run out of mana and can no longer cast " + hero.getAttackBehavior().getName());
+    	
     	else {
-    	hero.attack(hero);
-    	hero.setMana(hero.getMana() - 1);
-    	monster.attack(hero);
+	    	int bonus = hero.attack(hero);
+	    	System.out.println("You" + hero.getAttackBehavior().toString() + bonus);
+	    	hero.setMana(hero.getMana() - 1);
+	    	
+	    	int dmg = monster.attack(hero);
+	    	String dmgOut = "";
+	    	if(dmg > 0) dmgOut += monster.getName() + "" + monster.getAttackBehavior().toString() + "" + monster.getName() + " for " + dmg + " damage.";
+	    	if(dmg == 0) dmgOut += monster.getName() + "'s attack missed.";
+	    	System.out.println(dmgOut);
     	}
     }
 
