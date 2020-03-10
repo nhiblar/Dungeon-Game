@@ -1,12 +1,14 @@
 package specialAttack;
 
 import main.Dice;
+import attack.AttackBehavior;
 import gameCharacters.DungeonCharacter;
 
-public class MagicMissile implements SpecialAttack {
-    //Auto hits for big damage!
-    @Override
-    public int specialAttack(DungeonCharacter enemy) {
+
+public class MagicMissile implements AttackBehavior {
+    
+	@Override
+    public int attack(DungeonCharacter enemy) {
         int dam = Dice.d8() * 2;
         enemy.subtractHitPoints(dam);
         return dam;

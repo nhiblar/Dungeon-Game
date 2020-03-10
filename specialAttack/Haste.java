@@ -1,13 +1,12 @@
 package specialAttack;
 
-import gameCharacters.DungeonCharacter;
 import main.Dice;
+import attack.AttackBehavior;
+import gameCharacters.DungeonCharacter;
 
-import static main.DungeonDriver.hero;
-
-public class Haste implements SpecialAttack {
+public class Haste implements AttackBehavior {
     @Override
-    public int specialAttack(DungeonCharacter hero) {
+    public int attack(DungeonCharacter hero) {
         int dam = Dice.d4();
         hero.subtractHitPoints(dam);
         int init = hero.getInitiative();
@@ -19,7 +18,6 @@ public class Haste implements SpecialAttack {
     public String getName() {
         return "Haste";
     }
-
 
     @Override
     public String toString() {

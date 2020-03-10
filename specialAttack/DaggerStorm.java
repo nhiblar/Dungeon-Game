@@ -1,16 +1,17 @@
 package specialAttack;
 
 import main.Dice;
+import attack.AttackBehavior;
 import gameCharacters.DungeonCharacter;
 
-public class DaggerStorm implements SpecialAttack {
+public class DaggerStorm implements AttackBehavior {
 
     private int count;
 
     @Override
-    public int specialAttack(DungeonCharacter enemy) {
+    public int attack(DungeonCharacter enemy) {
     	int dam = 0;
-    	for (int i = 0; i < 4; i++) {
+    	for (int i = 0; i < 3; i++) {
             if (Dice.d20() - enemy.getAC() > 0) {
                 this.count++;
             }
@@ -33,4 +34,5 @@ public class DaggerStorm implements SpecialAttack {
     public String getName() {
     	return "Dagger Storm";
     }
+
 }

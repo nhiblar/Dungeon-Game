@@ -1,11 +1,12 @@
 package specialAttack;
 
 import main.Dice;
+import attack.AttackBehavior;
 import gameCharacters.DungeonCharacter;
 
-public class EldrichBlast implements SpecialAttack {
+public class EldrichBlast implements AttackBehavior {
     @Override
-    public int specialAttack(DungeonCharacter enemy) {
+    public int attack(DungeonCharacter enemy) {
         int dam = Dice.d10() * 2;
         enemy.subtractHitPoints(dam);
         return dam;

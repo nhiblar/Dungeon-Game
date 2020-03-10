@@ -1,11 +1,14 @@
 package specialAttack;
 
 import main.Dice;
+import attack.AttackBehavior;
 import gameCharacters.DungeonCharacter;
 
-public class Entangle implements SpecialAttack {
-    @Override
-    public int specialAttack(DungeonCharacter enemy) {
+
+public class Entangle implements AttackBehavior {
+   
+	@Override
+    public int attack(DungeonCharacter enemy) {
         int dam = Dice.d4();
         enemy.subtractHitPoints(dam);
         int init = enemy.getInitiative();

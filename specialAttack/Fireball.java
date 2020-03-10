@@ -1,12 +1,13 @@
 package specialAttack;
 
 import main.Dice;
+import attack.AttackBehavior;
 import gameCharacters.DungeonCharacter;
 
-public class Fireball implements SpecialAttack {
-    //Auto hits for big damage!
+
+public class Fireball implements AttackBehavior {
     @Override
-    public int specialAttack(DungeonCharacter enemy) {
+    public int attack(DungeonCharacter enemy) {
         int dam = Dice.d6() * 3;
         enemy.subtractHitPoints(dam);
         return dam;
