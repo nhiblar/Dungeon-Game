@@ -1,0 +1,121 @@
+Enter your hero's race: 
+(Discovered Races: Aarakocra, BugBear, Elf, Dragonborn, Dwarf, Gnome, Goliath, HalfElf, Human, Lizardfolk, Triton, Tabaxi)
+BugBear
+Enter your hero's class: 
+(Known classes: Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard)
+Barbarian
+Enter your hero's Name: 
+Morp
+Morp the BugBear, Barbarian has base stats of: 
+21 HP, 15 AC, 1 Initiative, 3 MP
+As you enter this room, flames shoot towards you...
+and you take 6 damage.
+Current health is: 15 HP
+
+Would you like to use a potion?
+Yes (y) or No (n)?y
+
+Which potion would you you like to use?
+HP) Heal Potion
+hp
+Morp uses Heal Potion and increases hit points by 5.
+Hero: heal potionMorp now has 15.
+Current room: 
+#########
+#       #
+#        
+#     T #
+###   ###
+Move direction: Left (a), Right (d), Up (w), or Down (s).
+d
+Morp is attacked by a Skeleton.
+Attack with your Great Sword (1) or Power Attack (2) ?
+2
+Morp's attack missed.
+Sargath the Skeleton's attack missed.
+Morp: 15Hp | Sargath the Skeleton: 10Hp
+Attack with your Great Sword (1) or Power Attack (2) ?
+2
+Morp uses Power Attack and deals Sargath the Skeleton for 13 damage.
+Morp: 15Hp | Sargath the Skeleton: 0Hp
+Sargath the Skeleton has been slain!
+You found a mana potion.
+Current potion count is: 1 health potion(s) 1 mana potion(s) 0 vision potion(s).
+
+Would you like to use a potion?
+Yes (y) or No (n)?n
+Current room: 
+#########
+# M   P #
+         
+#       #
+#########
+Move direction: Left (a), Right (d), Up (w), or Down (s).
+d
+Morp is attacked by a Gnoll.
+Attack with your Great Sword (1) or Power Attack (2) ?
+1
+Morp's attack missed.
+Monica the Gnoll's attack missed.
+Morp: 15Hp | Monica the Gnoll: 12Hp
+Attack with your Great Sword (1) or Power Attack (2) ?
+1
+Morp cleaves Monica the Gnoll for 14 damage.
+Morp: 15Hp | Monica the Gnoll: 0Hp
+Monica the Gnoll has been slain!
+You found a vision potion.
+Current potion count is: 1 health potion(s) 1 mana potion(s) 1 vision potion(s).
+
+Would you like to use a potion?
+Yes (y) or No (n)?y
+
+Which potion would you you like to use?
+VP) Vision Potion
+HP) Heal Potion
+MP) Mana Potion
+vp
+Morp uses Vision potion.
+###########################
+#       ##       ##       #
+             H   ##        
+#       ##       ##       #
+############   ######   ###
+############   ######   ###
+#       ##       ##       #
+        ##       ##       #
+#       ##       ##       #
+###   ######   ######   ###
+Current room: 
+#########
+# M   P #
+        #
+#       #
+###   ###
+Move direction: Left (a), Right (d), Up (w), or Down (s).
+s
+Morp is attacked by a Goblin.
+Attack with your Great Sword (1) or Power Attack (2) ?
+1
+Morp's attack missed.
+Gangar the Goblin's attack missed.
+Morp: 15Hp | Gangar the Goblin: 7Hp
+Attack with your Great Sword (1) or Power Attack (2) ?
+1
+Morp's attack missed.
+Gangar the Goblin's attack missed.
+Morp: 15Hp | Gangar the Goblin: 7Hp
+Attack with your Great Sword (1) or Power Attack (2) ?
+1
+Morp cleaves Gangar the Goblin for 12 damage.
+Morp: 15Hp | Gangar the Goblin: 0Hp
+Gangar the Goblin has been slain!
+
+Would you like to use a potion?
+Yes (y) or No (n)?n
+Current room: 
+###   ###
+# M     #
+#       #
+#       #
+###   ###
+Move direction: Left (a), Right (d), Up (w), or Down (s).
