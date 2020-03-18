@@ -107,5 +107,55 @@ public class GetUserInput {
 		}
 		return again;
 	}
+   
+   public static String getYesOrNoResponse(){
+      String response = "";
+      Scanner kb = new Scanner(System.in);
+      
+      System.out.print("Yes (y) or No (n)?");
+      response = kb.nextLine();
+      response = response.toUpperCase();
+      while(!(response.equals("Y") || response.equals("N"))){
+         System.out.print("Yes (y) or No (n)?");
+         response = kb.nextLine();
+         response = response.toUpperCase();
+      }
+      return response;
+   }
+   
+   public static String getPotionResponse(){
+      String response = "";
+      Scanner kb = new Scanner(System.in);
+      
+      response = kb.nextLine();
+      response = response.toUpperCase();
+      
+      while(!(response.equals("VP") || response.equals("HP") || response.equals("MP"))){
+         System.out.print("Invalid response: please enter VP for Vision Potion, HP for Heal Potion, \nor MP for Mana Potion if you have that potion");
+         
+         response = kb.nextLine();
+         response = response.toUpperCase();
+         
+      }
+      return response;
+   }
+   
+	public static String direction() {
+		
+		String again = "";
+		Scanner kb = new Scanner(System.in);
+		
+		while(!(again.equals("a") || again.equals("d") || again.equals("w") || again.equals("s"))) {
+				System.out.println("Move direction: Left (a), Right (d), Up (w), or Down (s).");
+				again = kb.nextLine();
+				again = again.trim().toLowerCase();
+				if(again.equals("a")) again = "a";
+				if(again.equals("d")) again = "d";
+				if(again.equals("a")) again = "w";
+				if(again.equals("s")) again = "s";
+		}
+		return again;
+	}
+	
 	
 }
