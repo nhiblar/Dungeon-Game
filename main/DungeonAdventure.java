@@ -16,6 +16,13 @@ public class DungeonAdventure {
  *  List of refactors with code snippets for part A.
  * 
  * Colton Cronquist:
+ * DungeonDriver class(refactor and potion user)
+ * getUserInput( getYesOrNoResponse, PotionResponse)
+ * MonsterFactory and all monsters
+ * refactor hero and added potion methods in Hero
+ * UML
+ * helped Nate debugg Dungeon and rooms
+ *
  * 
  * 
  * Eddie Joseph:
